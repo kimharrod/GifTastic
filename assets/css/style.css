@@ -1,0 +1,81 @@
+body  {
+
+	background-image: url(../images/rainbowbackground.jpg);
+	background-size: cover;
+	background-repeat: none;
+	height: 100%;
+	font-family: 'Nunito', sans-serif;
+}
+
+
+.top-buffer { 
+
+	margin-top: 10px; 
+}
+
+
+.bottom-buffer { 
+
+	margin-bottom: 10px; 
+}
+
+
+.col-md-12, .col-med-6 {
+
+	box-sizing: border-box;
+
+	color: rgb(51, 51, 51);
+
+	display: block;
+	
+	font-size: 30px;
+
+	font-weight: 300;
+	
+	line-height: 60px;
+}
+
+#gifForm {
+
+	background-color: azure;
+	text-align: center;
+}
+
+
+#buttonArea {
+
+	box-sizing: border-box;
+	
+	color: rgb(51, 51, 51);
+
+	display: block;
+
+	margin-left: 0.5%;
+	
+	font-size: 50px;
+
+	font-weight: 500;
+	
+	line-height: 60px;
+}
+
+
+
+#gifArea {
+
+	box-sizing: border-box;
+	
+	color: rgb(51, 51, 51);
+
+	display: block;
+
+	margin-left: 0.5%;
+	
+	font-size: 50px;
+
+	font-weight: 500;
+	
+	line-height: 60px;
+}
+
+
