@@ -2,12 +2,12 @@ $(document).ready(function(){
 
 	// Create a variable for the topics
 
-	var topics = ["penguins", "peregrine falcons", "owls", "swans", "hummingbirds", "seagulls", "geese", "robins"]; 
+	var topics = ["penguins", "peregrine falcons", "owls", "swans", "hummingbirds", "seagulls", "geese", "finches"]; 
 
 	// Create a loop to take each topic in the array and make a button for that topic
 
 	for (var i = 0; i < topics.length; i++) {
-		var topicButton = $("<button>");
+		var topicButton = $("<button class='btn btn-info btn-med'>");
 
 		// Add an attribute to each button corresponding to the name of that button's topic 
 
