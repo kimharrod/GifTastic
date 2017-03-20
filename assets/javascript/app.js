@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 	// Create a variable for the topics
 
-	var topics = ["penguins", "peregrine falcons", "owls", "swans", "hummingbirds", "seagulls", "geese", "finches"]; 
+	var topics = ["penguins", "peregrine falcon", "owls", "swan", "hummingbird", "seagulls", "geese", "finches", "crow", "hawk"]; 
 
 
 	// Function to make buttons appear on the page
