@@ -107,6 +107,44 @@ $(document).ready(function(){
 
 			} // end for loop to retrieve gifs and append to gif div 
 
+
+		// Function to flip data state on click from still to animate and back again
+
+		$(".pic").on("click", function() {
+
+			// Make a variable named state to store the image's data-state
+
+			var state = $(this).attr("data-state");
+			console.log("Current data-state is: " + state);
+			console.log($(this).attr("data-animate"));
+
+			// Check if the attribute data-state is equal to still
+
+			if (state === "still") {
+
+				// Update the src attribute to reflect the url for the animated gif
+
+				$(this).attr("src", $(this).attr("data-animate"));
+
+				// Update the data-state attribute to animate
+
+				$(this).attr("data-state", "animate");
+
+			} else {
+
+				// Update the src attribute to reflect the url for the still image
+
+				$(this).attr("src", $(this).attr("data-still"));
+
+				// Update the data-state attribute to still
+
+				$(this).attr("data-state", "still");
+
+			} // end the data-state if else
+
+
+		}); // end function to flip data state
+
 	
 		}); // end ajax done function
 
