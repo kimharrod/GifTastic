@@ -1,8 +1,15 @@
 $(document).ready(function(){
 
+	event.preventDefault();
+
 	// Create a variable for the topics
 
 	var topics = ["penguins", "peregrine falcons", "owls", "swans", "hummingbirds", "seagulls", "geese", "finches"]; 
+
+
+	// Function to make buttons appear on the page
+
+	function makeButtons () {
 
 	// Create a loop to take each topic in the array and make a button for that topic
 
@@ -24,6 +31,13 @@ $(document).ready(function(){
 		$("#buttonArea").append(topicButton);
 
 		} // end topic button loop
+
+	} // end make buttons function
+
+
+	// Wrapping the functions for button click, ajax call and image click with an initialize function
+
+	function initButtons () {
 
 
 	// Creating an on click event for the topic buttons and attaching a function to retrieve and insert gifs of that topic
@@ -151,7 +165,37 @@ $(document).ready(function(){
 
 	}); // end button click function
 
+    } // end init button wrapping function
 
-	
+
+    // function to add a new topic to the button group
+
+    $("#submitTopic").on("click", function(event) {
+
+    	// create a variable to hold the new topic name
+
+    	var topicName = $("#newTopic").val();
+    	console.log(topicName);
+
+    	// pushing the new topic into our topic array
+
+    	topics.push(topicName);
+
+    	// clear the existing button area
+
+    	$("#buttonArea").html("");
+
+    	// call function to make buttons
+
+    	makeButtons();
+
+    	// call init buttons function to initialize click event bindings on re-drawn buttons
+
+    	initButtons();
+
+    }); // end add topic button function
+
+makeButtons ();
+initButtons ();	
 
 }); // end document.ready function
