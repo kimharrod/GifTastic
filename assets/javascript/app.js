@@ -183,7 +183,12 @@ $(document).ready(function(){
 
     	// clear the existing button area
 
-    	$("#buttonArea").html("");
+    	$("#buttonArea").empty();
+
+    	// clear the form input box and reset the placeholder text
+
+    	$("#newTopic").val("");
+    	$("#newTopic").attr("placeholder", "Type of bird");
 
     	// call function to make buttons
 
@@ -194,6 +199,15 @@ $(document).ready(function(){
     	initButtons();
 
     }); // end add topic button function
+
+
+    // function to clear the gifs from the page
+
+    $("#clearButton").on("click", function(event) {
+
+    	$("#gifArea").empty();
+
+    }); // end function to clear gifs
 
 makeButtons ();
 initButtons ();	
